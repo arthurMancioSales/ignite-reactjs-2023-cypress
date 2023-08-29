@@ -36,6 +36,7 @@ export function RadioButton({
         checked={isChecked}
         onChange={handleChange}
         required
+        data-payment-type={htmlFor}
       />
       {icon}
       <span>{PaymentMethodsLabels[label]}</span>
