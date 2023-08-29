@@ -22,7 +22,7 @@ describe('<Counter />', () => {
       </TestWrapper>,
     )
     cy.get('[data-counter=increment]').click()
-    cy.get('@onChangeSpy').should('have.been.calledWith', quantity + 1)
+    cy.get('@onChangeSpy').should('have.been.calledOnceWith', quantity + 1)
   })
 
   it('clicking - subtracts one to the count', () => {
@@ -35,7 +35,7 @@ describe('<Counter />', () => {
       </TestWrapper>,
     )
     cy.get('[data-counter=decrement]').click()
-    cy.get('@onChangeSpy').should('have.been.calledWith', quantity - 1)
+    cy.get('@onChangeSpy').should('have.been.calledOnceWith', quantity - 1)
   })
 
   it('clicking - when quantity is 0 should do nothing', () => {
@@ -48,6 +48,6 @@ describe('<Counter />', () => {
       </TestWrapper>,
     )
     cy.get('[data-counter=decrement]').click()
-    cy.get('@onChangeSpy').should('have.been.calledWith', 0)
+    cy.get('@onChangeSpy').should('have.been.calledOnceWith', 0)
   })
 })
