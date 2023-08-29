@@ -28,7 +28,7 @@ export function Catalog({ coffee }: CatalogProps) {
 
   return (
     <Wrapper>
-      <img src={`./coffees/${coffee.image}`} alt={coffee.name} />
+      <img src={`/public/coffees/${coffee.image}`} alt={coffee.name} />
 
       <Tags>
         {coffee.tags.map((tag) => (
@@ -58,6 +58,7 @@ export function Catalog({ coffee }: CatalogProps) {
             id="cartButton"
             disabled={!quantity}
             onClick={handleAddCoffeeToCart}
+            data-cart
           >
             <ShoppingCart size={22} weight="fill" />
           </button>

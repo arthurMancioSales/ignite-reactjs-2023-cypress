@@ -18,7 +18,7 @@ export function Cart({ coffee }: CartProps) {
     incrementCoffeeToCart,
   } = useContext(CartContext)
   const [quantity, setQuantity] = useState(
-    cart.find((item) => item.id === coffee.id)?.quantity ?? 0,
+    cart?.find((item) => item.id === coffee.id)?.quantity ?? 0,
   )
 
   function handleQuantityChange(newQuantity: number) {
@@ -38,7 +38,7 @@ export function Cart({ coffee }: CartProps) {
   return (
     <Wrapper>
       <Info>
-        <img src={`./coffees/${coffee.image}`} alt={coffee.name} />
+        <img src={`/public/coffees/${coffee.image}`} alt={coffee.name} />
         <div id="details">
           <span id="name">{coffee.name}</span>
           <div id="actions">
