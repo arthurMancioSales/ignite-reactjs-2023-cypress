@@ -27,6 +27,8 @@ export function Cart({ coffee }: CartProps) {
       return
     }
 
+    if (newQuantity < 0) return
+
     if (newQuantity < quantity) decrementCoffeToCart(coffee.id)
     else if (newQuantity > quantity) incrementCoffeeToCart(coffee.id)
 
