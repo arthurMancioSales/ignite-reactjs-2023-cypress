@@ -36,7 +36,7 @@ export function Cart({ coffee }: CartProps) {
   }
 
   return (
-    <Wrapper>
+    <Wrapper data-coffee-cart={coffee.id}>
       <Info>
         <img src={`/public/coffees/${coffee.image}`} alt={coffee.name} />
         <div id="details">

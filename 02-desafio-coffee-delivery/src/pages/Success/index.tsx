@@ -22,7 +22,7 @@ export function Success() {
   return (
     <Wrapper>
       <Header>
-        <h2>Uhu! Pedido confirmado</h2>
+        <h2 data-confirmed-order-title>Uhu! Pedido confirmado</h2>
         <p className="subtitle">
           Agora é só aguardar que logo o café chegará até você
         </p>
@@ -37,9 +37,13 @@ export function Success() {
               <Badge.Infos>
                 <p>
                   Entrega em{' '}
-                  <strong>{`${address?.street}, ${address?.number} ${address?.complement}`}</strong>
+                  <strong
+                    data-delivery-address
+                  >{`${address?.street}, ${address?.number} ${address?.complement}`}</strong>
                 </p>
-                <p>{`${address?.neighborhood} - ${address?.city}, ${address?.uf}`}</p>
+                <p
+                  data-delivery-reference
+                >{`${address?.neighborhood} - ${address?.city}, ${address?.uf}`}</p>
               </Badge.Infos>
             </Badge.Container>
             <Badge.Container>
@@ -60,7 +64,7 @@ export function Success() {
               <Badge.Infos>
                 <p>Pagamento na entrega</p>
                 <p>
-                  <strong>
+                  <strong data-delivery-payment>
                     {!!paymentMethod && PaymentMethodsLabels[paymentMethod]}
                   </strong>
                 </p>

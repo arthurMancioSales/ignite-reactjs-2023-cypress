@@ -85,6 +85,7 @@ export function Cart() {
                 value={cep}
                 onChange={(event) => setCep(event.target.value)}
                 required
+                data-input-cep
               />
             </div>
             <div className="form-row">
@@ -95,6 +96,7 @@ export function Cart() {
                 value={street}
                 onChange={(event) => setStreet(event.target.value)}
                 required
+                data-input-street
               />
             </div>
             <div className="form-row">
@@ -105,6 +107,7 @@ export function Cart() {
                 value={number}
                 onChange={(event) => setNumber(event.target.value)}
                 required
+                data-input-number
               />
               <input
                 className="col-4"
@@ -112,6 +115,7 @@ export function Cart() {
                 placeholder="Complemento (opcional)"
                 value={complement}
                 onChange={(event) => setComplement(event.target.value)}
+                data-input-complement
               />
             </div>
             <div className="form-row">
@@ -122,6 +126,7 @@ export function Cart() {
                 value={neighborhood}
                 onChange={(event) => setNeighborhood(event.target.value)}
                 required
+                data-input-neighborhood
               />
               <input
                 className="col-3"
@@ -130,12 +135,14 @@ export function Cart() {
                 value={city}
                 onChange={(event) => setCity(event.target.value)}
                 required
+                data-input-city
               />
               <select
                 className="col-1"
                 value={uf}
                 onChange={(event) => setUf(event.target.value)}
                 required
+                data-input-uf
               >
                 <option value="">UF</option>
                 <option value="AC">AC</option>
@@ -261,7 +268,7 @@ export function Cart() {
             </p>
           </Results>
 
-          <SubmitButton type="submit" disabled={!cart.length}>
+          <SubmitButton type="submit" disabled={!cart.length} data-submit-order>
             Confirmar Pedido
           </SubmitButton>
         </div>
