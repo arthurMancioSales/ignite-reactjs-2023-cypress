@@ -11,7 +11,7 @@ import {
   SubmitButton,
 } from './styles'
 import { RadioButton } from '../../components/RadioButton'
-import { CoffeeCard } from '../../components/CoffeCard'
+import { CoffeeCard } from '../../components/CoffeeCard'
 import { CartContext } from '../../contexts/CartContext'
 import { DeliveryContext } from '../../contexts/DeliveryContext'
 import { PaymentMethods } from '../../reducers/delivery/reducer'

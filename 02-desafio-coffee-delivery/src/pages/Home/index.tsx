@@ -2,7 +2,7 @@ import { ShoppingCart, Timer, Package, Coffee } from 'phosphor-react'
 
 import Cup from '../../assets/cup.png'
 import { Wrapper, CoffeeList, Items, Title } from './styles'
-import { CoffeeCard } from '../../components/CoffeCard'
+import { CoffeeCard } from '../../components/CoffeeCard'
 import { Badge } from '../../components/Badge'
 
 import { coffees } from '../../coffees'

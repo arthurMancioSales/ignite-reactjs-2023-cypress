@@ -49,6 +49,7 @@ export function Cart({ coffee }: CartProps) {
             <RemoveButton
               type="button"
               onClick={() => removeCoffeeFromCart(coffee.id)}
+              data-remove-coffee
             >
               <Trash size={16} />
               <span>REMOVER</span>
