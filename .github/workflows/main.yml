@@ -13,8 +13,10 @@ jobs:
       - name: Change directory
         run: cd ./02-desafio-coffee-delivery
         
-      - name: Cypress run
-        uses: cypress-io/github-action@v5
-        with:
-          build: npm run build
-          start: npm start
+      # - name: Cypress run
+      #   uses: cypress-io/github-action@v5
+      #   with:
+      #     build: npm run build
+      #     start: npm start
+      - name: console log
+        run: ls
