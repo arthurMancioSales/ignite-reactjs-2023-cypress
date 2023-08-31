@@ -11,12 +11,4 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and run all Cypress test
       - name: Change directory
-        run: cd ./02-desafio-coffee-delivery && ls
-        
-      # - name: Cypress run
-      #   uses: cypress-io/github-action@v5
-      #   with:
-      #     build: npm run build
-      #     start: npm start
-      - name: console log
-        run: ls
+        run: cd ./02-desafio-coffee-delivery && npm install && npm run dev && npx cypress run -y
