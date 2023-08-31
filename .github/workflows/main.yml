@@ -9,12 +9,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: access directory
-        run: cd 02-desafio-coffee-delivery
+      # and run all Cypress test
+      - name: Change directory
+        working-directory: ./02-desafio-coffee-delivery
         
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          build: cd npm run build
+          build: npm run build
           start: npm start
